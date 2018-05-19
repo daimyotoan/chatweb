@@ -1,0 +1,165 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    min-height: 1000px;
+}
+
+app-room-list {
+    display: block;
+}
+
+.mat-form-field, .mat-checkbox {
+    width: 100%;
+}
+
+.checkbox, .radio {
+    margin-top: 0 !important;
+}
+
+.mt-05 { margin-top: 0.5em; }
+.mt-10 { margin-top: 1.0em; }
+.mt-15 { margin-top: 1.5em; }
+.mt-20 { margin-top: 2.0em; }
+.mt-25 { margin-top: 2.5em; }
+.mt-30 { margin-top: 3.0em; }
+
+.thumb {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 53% 0 0 0;
+    margin-bottom: 5px;
+    border: 1px solid #eeeeee;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.thumbnail-image {
+    background-color: #000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 53% 0 0 0;
+    border: 1px solid #eeeeee;
+}
+
+.thumb-icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: orange;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.header-top-content {
+    .site-logo {
+        img {
+            height: 44px;
+        }
+    }
+}
+
+.form-content .form-group:nth-of-type(3):before {
+    display: none;
+}
+
+.form-content .form-group:nth-of-type(2):before {
+
+}
+
+.inline-input {
+    display: inline-block !important;
+}
+
+.custom-autocomplete {
+    .main-text, .secondary_text {
+        background-color: inherit !important;
+        padding: 0 !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
+        border-radius: 0 !important;
+        color: #000 !important;
+        top: 0 !important;
+        position: relative !important;
+    }
+}
+
+.custom-autocomplete__dropdown[_ngcontent-c2] .custom-icon[_ngcontent-c2] {
+    vertical-align: middle;
+}
+
+.corousel-gallery-content {
+    margin-top: 20px;
+}
+
+.mat-tab-body-content {
+    overflow: hidden !important;
+}
+
+.attributes-multi-select {
+    ul.lazyContainer {
+        li {
+            label {
+                display: inline-block;
+            }
+            label.title {
+                margin-left: 5px;
+                font-weight: normal;
+                text-transform: none;
+            }
+            span.thumb-icon {
+                margin-right: 0;
+                margin-bottom: 2px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.apartments-content {
+    overflow: hidden;
+    .text-content {
+        height: 235px;
+        .top-content {
+            border-top-color: rgba(0, 0, 0, 0);
+        }
+    }
+    .thumbnail-image {
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        background-size: cover;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

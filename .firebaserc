@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "quanlytro",
+    "prod": "giaiphaptro"
+  }
+}

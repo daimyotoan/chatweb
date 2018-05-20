@@ -36,7 +36,7 @@ export class PeoplesComponent implements OnInit {
 
         this.authService.getUser().subscribe(
             (user) => {
-                if (user) {
+                if (user && user.uid === '68C1aJlVLDWwOKJorirlm9AVomT2') {
                     this.user = user;
                     this.listPeoples();
                 }

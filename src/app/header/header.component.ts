@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
             .then((res) => {
                 this.authService.getUser().subscribe(
                     (user) => {
-                        if (user) {
+                        if (user && user.uid === '68C1aJlVLDWwOKJorirlm9AVomT2') {
                             this.user = user;
                         }
                         else {
@@ -36,11 +36,12 @@ export class HeaderComponent implements OnInit {
     ngOnInit() {
         this.authService.getUser().subscribe(
             (user) => {
-                if (user) {
+                if (user && user.uid === '68C1aJlVLDWwOKJorirlm9AVomT2') {
                     this.user = user;
                 }
                 else {
                     this.user = null;
+                    alert('You have to sign in by SM Admin Support account !');
                 }
                 console.log(user);
             }

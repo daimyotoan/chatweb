@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
-import { firebase } from '../core/firebase';
-import { IModel, Model } from '../models/Model';
-import { PartialObserver } from 'rxjs/Observer';
-import { Subject } from 'rxjs/Subject';
+import {Injectable} from '@angular/core';
+import {AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
+import {Observable} from 'rxjs/Observable';
+import {firebase} from '../core/firebase';
+import {IModel, Model} from '../models/Model';
+import {PartialObserver} from 'rxjs/Observer';
+import {Subject} from 'rxjs/Subject';
 import Reference = firebase.database.Reference;
-import { FirebaseListFactoryOpts } from 'angularfire2/interfaces';
+import {FirebaseListFactoryOpts} from 'angularfire2/interfaces';
 
 
 @Injectable()
@@ -66,7 +66,7 @@ export class BaseService<T extends Model> {
     createPaths(paths: [string]) {
         let result = '';
         paths.forEach(path => {
-           result += `${path}/`;
+            result += `${path}/`;
         });
         return result;
     }

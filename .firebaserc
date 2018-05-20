@@ -1,6 +1,5 @@
 {
   "projects": {
-    "default": "quanlytro",
-    "prod": "giaiphaptro"
+    "default": "chatweb-f49c7"
   }
 }

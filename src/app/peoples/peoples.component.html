@@ -1,14 +1,13 @@
-<div id="left">
+<div>
     <div class="mdl-layout__content mdl-color--grey-100" style="width: 100% !important; height:100% !important;">
         <div class="mdl-cell mdl-cell--12-col mdl-grid">
             <!-- Messages container -->
             <div id="people-card" style="width: 100% !important; height:100% !important;"
                  class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
-                <button (click)="listRooms()"> Test Load People
-                </button>
                 <div class="mdl-card__supporting-text mdl-color-text--grey-600">
                     <div id="peoples">
-                        <div *ngFor="let people of finalPeoples">
+                        <div *ngFor="let people of finalPeoples"
+                        (click)="onPeopleItemClicked(people)">
                             <div class="message-container visible">
                                 <div class="spacing">
                                     <div class="pic"

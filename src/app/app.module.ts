@@ -17,12 +17,20 @@ import {SpinnerModule} from '@chevtek/angular-spinners/dist';
 import {AuthService} from './auth.service';
 import {PeoplesService} from './service/peoples.service';
 import {BaseService} from './service/base.service';
+import {MessageService} from './service/message.service';
+import {AppRoutingModule} from './app-routing.module';
+import {PeoplesRoutesModule} from './peoples/peoples.route';
+import {MessagesRoutesModule} from './messages/messages.route';
+import {FormsModule} from '@angular/forms';
+import {DeviceTokensService} from './service/device-token.service';
+import {PushService} from './service/push.service';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
     bootstrap: [
         AppComponent
     ],
-    providers: [AuthService, PeoplesService, BaseService],
+    providers: [AuthService, PeoplesService, BaseService, MessageService, DeviceTokensService, PushService],
     declarations: [
         AppComponent,
         HeaderComponent,
@@ -36,6 +44,11 @@ import {BaseService} from './service/base.service';
         AngularMultiSelectModule,
         SpinnerModule,
         FirebaseModule,
+        AppRoutingModule,
+        HttpModule,
+        PeoplesRoutesModule,
+        MessagesRoutesModule,
+        FormsModule
     ]
 })
 export class AppModule {

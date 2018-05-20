@@ -1,3 +1,38 @@
-<p>
-  messages works!
-</p>
+  <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
+    <!-- Messages container -->
+    <div id="messages-card"
+         class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
+      <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+        <div id="messages">
+          <div *ngFor="let message of messages" class="message-container">
+            <div class="spacing">
+              <div class="pic" [ngStyle]="{'background-image': 'url(' + message.avatarUrl + ')'}"></div>
+            </div>
+            <div class="message" *ngIf="message.text">{{message.text}}</div>
+            <div class="message" *ngIf="message.photoUrl">
+              <img src="{{message.photoUrl}}"/>
+            </div>
+            <div class="name">{{message.name}}</div>
+            <div class="timestamp">{{message.timestamp | date:'dd-MM-yyyy'}}</div>
+          </div>
+        </div>
+        <form name="message-form" id="message-form" action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="message"
+                   name="message" [(ngModel)]="textMessage" required/>
+            <label class="mdl-textfield__label" for="message">Message...</label>
+          </div>
+          <button type="button" id="submit" (click)="saveMessage()" ng-disabled="message-form.$invalid"
+                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="must-signin-snackbar" class="mdl-js-snackbar mdl-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+
+  </div>

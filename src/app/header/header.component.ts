@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthService} from '../auth.service';
 import * as firebase from 'firebase/app';
 
 @Component({
@@ -10,7 +10,7 @@ import * as firebase from 'firebase/app';
 })
 export class HeaderComponent implements OnInit {
 
-    public user:firebase.User = null;
+    public user: firebase.User = null;
 
     constructor(public authService: AuthService, public router: Router) {
 
@@ -27,7 +27,6 @@ export class HeaderComponent implements OnInit {
                         else {
                             this.user = null;
                         }
-                        console.log(user);
                     }
                 );
             })
@@ -35,7 +34,23 @@ export class HeaderComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.authService.getUser().subscribe(
+            (user) => {
+                if (user) {
+                    this.user = user;
+                }
+                else {
+                    this.user = null;
+                }
+                console.log(user);
+            }
+        );
+    }
 
+    signout() {
+        this.authService.logout();
+        this.user = null;
+        console.log('Signed Out !!!');
     }
 
 }
